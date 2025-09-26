@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soups</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+         body{
+            background-color: #000;
+            margin: 0px;
+            width: 100%;
+            overflow-x: hidden;
+            background-position: fixed;
+        }
+        .navbar{
+            position:sticky;
+            top: 0px;
+            background-color: black;
+            width: 1150px;
+            height: 110px;
+        }
+        .logo{
+            width: 150px;
+            height: 70px;
+            margin-left: 110px;
+            margin-top: 30px;
+        }
+        .main{
+            display: flex;
+            justify-content:space-between;
+            margin-top: -50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 550px;
+            color: white;
+            list-style: none;
+        }
+        .main a{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        .main a:hover{
+            color: yellow;
+        }
+         #i{
+            color: #fff;
+            margin-right: -10px;
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        #i:hover{
+            color: rgb(226, 226, 236);
+        }
+        .button{
+           background-color: #ed1c24;
+           font-family:'Times New Roman', Times, serif;
+           font-weight: bold;
+           color: white;
+            border: 2px solid #ed1c24;
+            height: 50px;
+            border-radius: 25px;
+            margin-top: -15px;
+            margin-left: 50px;
+            margin-right: -85px;
+             padding: 15px;
+        }
+        .button:hover{
+            color: rgb(247, 247, 253);
+            font-size: 16px;
+            border:2px solid white;
+            background: radial-gradient(circle, rgb(110, 143, 138) 0%, rgb(129, 75, 129) 100%) ;
+        }
+        .hr{
+            background-color: rgb(60, 60, 68);
+            border: 1px solid rgb(26, 26, 27);
+            width: 1365px;
+        }
+        .cart-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .cart-container {
+            display: none;
+            position: absolute;
+            top: -50px;
+            margin-left: -25px;
+            width: 370px;
+            height: 635px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        #cart-toggle {
+            display: none;
+        }
+        .cart-label {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+        }
+        .cart-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 20px;
+            height: 20px;
+            background-color: #ff0238;
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #cart-toggle:checked ~ .cart-container {
+            display: block;
+        }
+        .cart-header {
+            display: flex;
+            text-align: left;
+            color: #000;
+            padding: 10px 15px;
+            border-bottom: 10px;
+        }
+        .btn1 {
+            font-size: 24px;
+            margin-right: -10px;
+            margin-left: 20px;
+            cursor: default;
+        }
+        .cart-body {
+            margin-top: 220px;
+            text-align: center;
+            height: 150px;
+            color: #666;
+        }
+        .min-order {
+            background: #FFC2C3;
+            color: #000;
+            font-size: 14px;
+            padding: 15px;
+            margin-top: 50px;
+            border-top: 1px solid #ff0238;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .checkout-btn {
+            width: 85%;
+            margin: 20px auto;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: not-allowed;
+            display: block;
+        }
+        .cross{
+            cursor: pointer;
+            margin-top: 25px;
+            margin-left: 10px;
+        }
+        .img{
+            width: 600px;
+            height: 500px;
+            margin-top: 70px;
+            margin-left: 90px;
+        }
+        .soup{
+            margin-top: -480px;
+            color: #fff;
+            text-align: center;
+            margin-left: 330px;
+            margin-top: -460px;
+        }
+        .sp{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 26px;
+            font-weight: bolder;
+            color: #fff;
+            text-align: center;
+            margin-left: 720px;
+        }
+        .sp1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 26px;
+            font-weight: bolder;
+            color: #fff;
+            text-align: center;
+            margin-left: 383px;
+            margin-top: 5px;
+        }
+        .sp2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 26px;
+            font-weight: bolder;
+            color: #fff;
+            text-align: center;
+            margin-left: 723px;
+            margin-top: -150px;
+        }
+        .cart{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 190px;
+            width: 300px;
+            height: 30px;
+            margin-left: -590px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+     <nav class="navbar">
+        <div>
+                <div><img src="salt.webp" alt="Salt n Pepper" class="logo"></div>
+          <div>
+              <ul class="main">
+                <li><a href="resturent.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="Publications.html">Publications</a></li>
+                <li><a href="Branches.html">Branches</a></li>
+                 <div class="cart-wrapper">
+    <input type="checkbox" id="cart-toggle">
+    <label for="cart-toggle" class="cart-label">
+      <li><i class="fa-solid fa-cart-shopping fa-xl"></i></li>
+      <span class="cart-badge">0</span>
+    </label>
+    <div class="cart-container">
+      <div class="cart-header">
+      <label for="cart-toggle" class="cross" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></label>
+        <h2 class="btn1">Your Cart</h2>
+      </div>
+      <hr>
+      <div class="cart-body">
+        <p>Your cart is empty</p></div>
+      <div class="cart-footer">
+        <p class="min-order">Min order amount must be greater than PKR 1000</p>
+        <button class="checkout-btn" disabled>Checkout</button></div>
+    </div>
+  </div>
+                <li><a href="online  order.html"><button class="button">Order Online</button></li></a></ul></div>
+          
+                <!-- <hr class="hr"> -->
+    <img src="chicken soup.webp " class="img">
+    <h5 class="soup">SOUPS</h5>
+    <hl class="sp">Chicken & Mushroom Cream Soup</hl>
+    <h1 class="sp1"> (Single)</h1>
+    <label for="rupees" class="sp2">Rs 790.00</label>
+    <button class="cart">Add To Cart</button>
+</body>
+</html>
