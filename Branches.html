@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branches</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="salt icon.ico">
+    <style>
+        body{
+            background-color: #000;
+            margin: 0px;
+            width: 100%;
+            overflow-x: hidden;
+            background-position: fixed;
+        }
+        .navbar{
+            position:sticky;
+            top: 0px;
+            background-color: black;
+            width: 1150px;
+            height: 110px;
+        }
+        .logo{
+            width: 150px;
+            height: 70px;
+            margin-left: 110px;
+            margin-top: 30px;
+        }
+        .main{
+            display: flex;
+            justify-content:space-between;
+            margin-top: -50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 550px;
+            color: white;
+            list-style: none;
+        }
+        .main a{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        .main a:hover{
+            color: yellow;
+        }
+        #i{
+            color: #fff;
+            margin-right: -10px;
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        #i:hover{
+            color: rgb(226, 226, 236);
+        }
+        .button{
+           background-color: #ed1c24;
+           font-family:'Times New Roman', Times, serif;
+           font-weight: bold;
+           color: white;
+            border: 2px solid #ed1c24;
+            height: 50px;
+            border-radius: 25px;
+            margin-top: -15px;
+            margin-left: 50px;
+            margin-right: -85px;
+             padding: 15px;
+        }
+        .button:hover{
+            color: rgb(247, 247, 253);
+            font-size: 16px;
+            border:2px solid white;
+            background: radial-gradient(circle, rgb(110, 143, 138) 0%, rgb(129, 75, 129) 100%) ;
+        }
+        .hr{
+            background-color: rgb(60, 60, 68);
+            border: 1px solid rgb(26, 26, 27);
+            width: 1365px;
+        }
+        .logo1{
+             width: 200px;
+            height: 85px;
+            margin-left: 600px;
+            margin-top: 10px;
+        }
+        .heading{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            background-color: #ed1c24;
+            width: 360px;
+            height: 30px;
+            border-radius: 4px;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px 5px 10px 5px;
+            margin: 32px 515px 24px;
+        }
+        .sub{
+            color: #fff;
+            margin-top: 5px;
+            margin-left: 580px;
+            font-size: large;
+        }
+        .insub{
+            font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-top: -47px;
+            margin-left: 760px;
+        }
+        .sub1{
+            color: #fff;
+            margin-top: 50px;
+            margin-left: 610px;
+            font-size: large;
+        }
+        .insub1{
+             font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-top: -47px;
+            margin-left: 770px;
+        }
+        .sub2{
+            color: #fff;
+            margin-top: 10px;
+            margin-left: 585px;
+            font-size: large;
+        }
+        .insub2{
+             font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-top: -47px;
+            margin-left: 675px;
+        }
+        .sub3{
+            color: #fff;
+            margin-top: 10px;
+            margin-left: 615px;
+            font-size: large;
+        }
+        .insub3{
+            font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-top: -47px;
+            margin-left: 750px;
+        }
+        .sub4{
+             color: #fff;
+            margin-top: 10px;
+            margin-left: 640px;
+            font-size: large;
+        }
+        .insub4{
+            font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-top: -47px;
+            margin-left: 740px;
+        }
+        .sub5{
+            color: #fff;
+            margin-top: 10px;
+            margin-left: 620px;
+            font-size: large;
+        }
+        .insub5{
+            font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-top: -47px;
+            margin-left: 760px;
+        }
+        .sub6{
+            color: #fff;
+            margin-top: 10px;
+            margin-left: 615px;
+            font-size: large;
+        }
+        .insub6{
+            font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-top: -47px;
+            margin-left: 760px;
+        }
+        .sub7{
+            color: #fff;
+            margin-top: 10px;
+            margin-left: 565px;
+            font-size: large;
+        }
+        .insub7{
+            font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-top: -47px;
+            margin-left: 799px;
+        }
+        .sub8{
+            color: #fff;
+            margin-top: 10px;
+            margin-left: 565px;
+            font-size: large;
+        }
+        .insub8{
+            font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-top: -47px;
+            margin-left: 731px;
+        }
+        .sub9{
+            color: #fff;
+            margin-top: 10px;
+            margin-left: 630px;
+            font-size: large;
+        }
+        .insub9{
+            font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-top: -47px;
+            margin-left: 761px;
+        }
+        .sub10{
+            color: #fff;
+            margin-top: 10px;
+            margin-left: 555px;
+            font-size: large;
+        }
+        .insub10{
+            font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-top: -47px;
+            margin-left: 740px;
+        }
+        .insub11{
+            font: 1em sans-serif;
+            font-size: small;
+            color: #fff;
+            margin-left: 560px;
+        }
+    .box12{
+            margin-top:  120px;
+            margin-right: -200px;
+            width: 1360px;
+            height: 600px;
+            background-color: rgb(17, 17, 17);
+         }
+         .img12{
+            width: 130px;
+            height: 55px;
+            margin-left: 130px;
+            margin-top: 60px;
+        }
+        .pr{
+             font-family:'Times New Roman', Times, serif;
+            color:  #c9c7c7;
+            margin-top: 30px;
+            text-align: left;
+            font-size: 17.5px;
+            margin-left: 130px;
+            margin-right: 850px;
+         }
+          .term{
+           font-family:'Times New Roman', Times, serif;
+            color: #f8f4f4;
+            margin-top: 30px;
+            text-align: left;
+            font-size: 17.5px;
+            margin-left: 130px;
+            margin-right: 790px;
+         }
+         .Privacy{
+           font-family:'Times New Roman', Times, serif;
+            color: #f8f4f4;
+            width: 500px;
+            margin-top: -37px;
+            text-align: left;
+            font-size: 17px;
+            margin-left: 280px;
+            margin-right: 790px;
+         }
+          .p1{
+            font-family: 'Times New Roman', Times, serif;
+            color: #fff;
+            width: 400px;
+            text-align: center;
+            margin-top: -530px;
+            margin-left: 500px;
+        }
+        .links{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #c9c7c7;
+            text-align: left;
+            font-size: 22px;
+            margin-left: 660px;
+            margin-top: 40px;
+        }
+        .links a{
+            color: #c9c7c7;
+            text-decoration: none;
+        }
+        .p2{
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            font-size: 16px;
+            text-align: left;
+            margin-top: -420px;
+            margin-left: 830px;
+            margin-right: 100px;
+        }
+        .p2 a{
+            color: #c9c7c7;
+            text-decoration: none;
+        }
+         .follow{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 22px;
+            color: #fff;
+            text-align: right;
+            margin-top: -510px;
+            margin-right: 5px;
+            
+        }
+        #ic1{
+            background-color: #ed1c24;
+            width: 40px;
+            height: 30px;
+            border-radius:50%;
+            margin-top: 10px;
+            margin-left: 1060px;
+            margin-right: -100px;
+            padding-top: 10px;
+            
+        }
+        #ic2{
+            background-color: #ed1c24;
+            width: 40px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 100px;
+            padding-top: 10px;
+        }
+        #ic3{
+            background-color: #ed1c24;
+            width: 40px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: -70px;
+            padding-top: 10px;
+        }
+        #ic1:hover{
+            color: yellowgreen;
+        }
+        #ic2:hover{
+            color: yellowgreen;
+        }
+        #ic3:hover{
+            color: yellowgreen;
+        }
+        .vl{
+            border-right: 1px solid #7e0b0f;
+            height: 800px;
+            margin-top: 120px;
+            margin-right: 250px;
+        }
+        .bton{
+            background-color: #ed1c24;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            border: 2px solid #ed1c24;
+            height: 48px;
+            background: transparent;
+            margin-left: 550px;
+            margin-top: 30px;
+            padding:15px;
+            cursor: pointer;
+        }
+        .bton:hover{
+            color: rgb(247, 247, 253);
+            font-size: 14px;
+            border:2px solid white;
+            background: radial-gradient(circle, rgb(17, 56, 56) 0%, rgb(36, 19, 68) 100%) ;
+        }
+        .btnn{
+            background-color: #ed1c24;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            border: 2px solid #ed1c24;
+            height: 50px;
+            background: transparent;
+            margin-left: 90px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .btnn:hover{
+            color: rgb(247, 247, 253);
+            font-size: 14px;
+            border:2px solid white;
+            background: radial-gradient(circle, rgb(17, 56, 56) 0%, rgb(36, 19, 68) 100%) ;
+        }
+       .cart-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .cart-container {
+      display: none;
+      position: absolute;
+      top: -50px;
+      margin-left: -25px;
+      width: 370px;
+      height: 635px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      /* z-index: 1000; */
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    #cart-toggle {
+      display: none;
+    }
+    .cart-label {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+    }
+    .cart-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      background-color: #ff0238;
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #cart-toggle:checked ~ .cart-container {
+      display: block;
+    }
+    .cart-header {
+      display: flex;
+      text-align: left;
+      color: #000;
+      padding: 10px 15px;
+      border-bottom: 10px;
+    }
+
+    .btn1 {
+      font-size: 24px;
+      margin-right: -10px;
+      margin-left: 20px;
+      cursor: default;
+    }
+
+    .cart-body {
+      margin-top: 220px;
+      text-align: center;
+      height: 150px;
+      color: #666;
+    }
+
+    .min-order {
+      background: #FFC2C3;
+      color: #000;
+      font-size: 14px;
+      padding: 15px;
+      margin-top: 50px;
+      border-top: 1px solid #ff0238;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .checkout-btn {
+      width: 85%;
+      margin: 20px auto;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #222;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: not-allowed;
+      display: block;
+    }
+    .cross{
+        cursor: pointer;
+        margin-top: 25px;
+        margin-left: 10px;
+    }
+        </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+                <div><img src="salt.webp" alt="Salt n Pepper" class="logo"></div>
+          <div>
+              <ul class="main">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="Publications.html">Publications</a></li>
+                <li><a href="Branches.html">Branches</a></li>
+                <div class="cart-wrapper">
+    <input type="checkbox" id="cart-toggle">
+    <label for="cart-toggle" class="cart-label">
+      <li><i class="fa-solid fa-cart-shopping fa-xl"></i></li>
+      <span class="cart-badge">0</span>
+    </label>
+    <div class="cart-container">
+      <div class="cart-header">
+      <label for="cart-toggle" class="cross" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></label>
+        <h2 class="btn1">Your Cart</h2>
+      </div>
+      <hr>
+      <div class="cart-body">
+        <p>Your cart is empty</p></div>
+      <div class="cart-footer">
+        <p class="min-order">Min order amount must be greater than PKR 1000</p>
+        <button class="checkout-btn" disabled>Checkout</button></div>
+    </div>
+  </div>
+                <li><a href="online  order.html"><button class="button">Order Online</button></li></a></ul></div>
+                <hr class="hr">
+                <div class="vl">
+                <img src="salt.webp" class="logo1">
+                <div class="heading">Salt'n Pepper-Gulberg</div>
+                    <h5 class="sub">Type of Restaurant —</h5>
+                    <h5 class="insub"> À la carte</h5>
+                    <h5 class="sub1">Seating Capacity —</h5>
+                    <h5 class="insub1">350</h5>
+                    <h5 class="sub2">Timings —</h5>
+                    <h5 class="insub2"> 11:00am – 12:00 midnight</h5>
+                    <h5 class="sub3">Valet Parking —</h5>
+                    <h5 class="insub3">Yes</h5>
+                    <h5 class="sub4">Free Wifi —</h5>
+                    <h5 class="insub4">Yes</h5>
+                    <h5 class="sub5">Children Area —</h5>
+                    <h5 class="insub5">Yes</h5>
+                    <h5 class="sub6">Children Menu —</h5>
+                    <h5 class="insub6">Yes</h5>
+                    <h5 class="sub7">Takeaway and Car Service —</h5>
+                    <h5 class="insub7">Availabe</h5>
+                    <h5 class="sub8">Restaurant Phone —</h5>
+                    <h5 class="insub8">+92-42-357-528-934</h5>
+                    <h5 class="sub9">Free Delivery — </h5>
+                    <h5 class="insub9">Yes</h5>
+                    <h5 class="sub10">Free Delivery Phone — </h5>
+                    <h5 class="insub10">+92-42-111-100-678</h5>
+                    <h5 class="insub11">48 – Commercial Zone, Gulberg , Lahore, Pakistan</h5>
+                    <div class="butn">
+                    <button class="bton">Order Now</button>
+                    <button class="btnn">Get Directions</button></div>
+                </div>
+            <div class="box12">
+                <img src="salt.webp" class="img12">
+                <p class="pr">The Salt’n Pepper Restaurants are an example of gracious dinning, outstanding service, extraordinary classic and contemporary cuisine. The restaurants have become the ultimate dinning destinations in Lahore. From family occasions to business dinner and moments of the heart, this place is where unforgettable memories are made.</p>
+                <p class="term">Term &Conditions </p>
+                <p class="Privacy">Privacy Policy</p>
+                </div>
+                <h3 class="p1">Site Links</h3>
+                <div class="links">
+                 <h5><a href="resturent.html">Home</h5></a>
+                 <h5><a href="about us.html">About us</h5></a>
+                 <h5><a href="#">Deals</h5></a>
+                 <h5><a href="#">Photos</h5></a>
+                 <h5><a href="Publications.html">Publications</h5></a>
+                 <h5><a href="#">Feedback</h5></a>
+                 <h5><a href="#">Contact us</h5></a></div>
+                <div class="p2">
+                <h4><a href="#">Contact Us</h4></a>
+                <h3>Head Office Address</h3>
+                <h5><a href="#">Foodconsults (Pvt) Ltd</h5></a>
+                <h5><a href="#">23-Usman Block, New GardenTown, Lahore, Pakistan</h5></a>
+                <h3>Head Office Number</h3>
+                <h5><a href="#">+92 42 358 509 31</h5></a>
+                <h5><a href="#">+92 42 358 509 30</h5> </a>
+                <h3>Email Address</h3>
+                <h5><a href="#">snpfood@brain.net.pk</h5></a>
+                <h3>Free Delivery Number</h3>
+                <h5><a href="#">+92 42 111 100 678</h5></a>
+                <h5><a href="#">+92 03 111 444 610</h5></a></div>
+            </div>
+            <div class="follow">Follow Us</div>
+            <div class="ic">
+            <i class="fa-brands fa-instagram" id="ic1"></i>
+            <i class="fa-brands fa-facebook-f" id="ic2"></i>
+            <i class="fa-brands fa-twitter" id="ic3"></i></div>
+
+             
+
+    </nav>
+</body>
+</html>

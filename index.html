@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salt n Pepper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="salt icon.ico">
+    <style>
+        body{
+            background-color: #000;
+            margin: 0px;
+            width: 100%;
+            overflow-x: hidden;
+            background-position: fixed;
+        }
+        .navbar{
+            position:sticky;
+            background-color: black;
+            width: 1350px;
+            height: 110px;
+            top: 0px;
+        }
+        .logo{
+            width: 150px;
+            height: 70px;
+            margin-left: 110px;
+            margin-top: 30px;
+        }
+        .main{
+            display: flex;
+            gap: 30px;
+            margin-top: -50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 550px;
+            color: white;
+            list-style: none;
+        }
+        .main a{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        .main a:hover{
+            color: yellow;
+        }
+        .main i{
+            margin-left: 20px;
+            margin-right: -10px;
+            margin-top: 15px;
+        }
+         .main i:hover{
+            color: rgb(226, 226, 236);
+        }
+        .button{
+           background-color: #ed1c24;
+           font-family:'Times New Roman', Times, serif;
+           font-weight: bold;
+           color: white;
+            border: 2px solid #ed1c24;
+            height: 50px;
+            border-radius: 25px;
+            margin-top: -15px;
+            margin-left: 50px;
+             padding: 15px;
+        }
+        .button:hover{
+            color: rgb(247, 247, 253);
+            font-size: 16px;
+            border:2px solid white;
+            background: radial-gradient(circle, rgb(110, 143, 138) 0%, rgb(129, 75, 129) 100%) ;
+        }
+        .heading{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            margin-top: 80px;
+            font-size: bolder;
+            text-align: center;
+            color: white;
+        }
+        /* mobile toggle button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: rgb(170, 70, 70);
+      margin: 4px 0;
+      border-radius: 5px;
+    }
+
+        @media only screen and (max-width: 600px){
+            .navbar{
+            position:sticky;
+            background-color: black;
+            width: 100%;
+            height: 100px;
+            /* top: 0px; */
+            align-items: center;
+
+         
+        }
+        .logo{
+            width: 70px;
+            height: 50px;
+            margin-left: 90px;
+            margin-top: 30px;
+        }
+        .main{
+            display: flex;
+            gap: 10px;
+            margin-top: -40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 140px;
+            color: white;
+            white-space: nowrap;
+            list-style: none;
+        }
+        .main a{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        .main a:hover{
+            color: yellow;
+        }
+        .main i{
+            margin-left: -3px;
+            margin-right: -10px;
+            margin-top: 15px;
+        }
+         .main i:hover{
+            color: rgb(226, 226, 236);
+        }
+        .button{
+           background-color: #ed1c24;
+           font-family:'Times New Roman', Times, serif;
+           font-weight: bold;
+           color: white;
+            border: 2px solid #ed1c24;
+            height: 50px;
+            border-radius: 25px;
+            margin-top: -15px;
+            margin-left: 12px;
+             padding: 15px;
+        }
+        .button:hover{
+            color: rgb(247, 247, 253);
+            font-size: 16px;
+            border:2px solid white;
+            background: radial-gradient(circle, rgb(110, 143, 138) 0%, rgb(129, 75, 129) 100%) ;
+        }
+        .heading{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            margin-top: 30px;
+            font-size: bolder;
+            text-align: center;
+            color: white;
+        }
+        .cart-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .cart-container {
+      display: none;
+      position: absolute;
+      top: -50px;
+      margin-left: -1970px;
+      width: 370px;
+      height: 635px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    #cart-toggle {
+      display: none;
+    }
+    .cart-label {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+    }
+    .cart-badge {
+      position: absolute;
+      top: -8px;
+      right: -18px;
+      width: 20px;
+      height: 20px;
+      background-color: #ff0238;
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #cart-toggle:checked ~ .cart-container {
+      display: block;
+    }
+    .cart-header {
+      display: flex;
+      text-align: left;
+      color: #000;
+      padding: 10px 15px;
+      border-bottom: 10px;
+    }
+
+    .btn1 {
+      font-size: 24px;
+      margin-right: 10px;
+      margin-left: 30px;
+      cursor: default;
+    }
+
+    .cart-body {
+      /* padding: 120px 20px 20px; */
+      margin-top: 220px;
+      text-align: center;
+      height: 150px;
+      color: #666;
+    }
+
+    .min-order {
+      background: #FFC2C3;
+      color: #000;
+      font-size: 14px;
+      padding: 15px;
+      margin-top: 50px;
+      border-top: 1px solid #ff0238;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .checkout-btn {
+      width: 85%;
+      margin: 20px auto;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #222;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: not-allowed;
+      display: block;
+    }
+    .cross{
+        cursor: pointer;
+        margin-top: 12px;
+        margin-left: -5px;
+    }
+    .img{
+             /* margin-top: 120px; */
+            max-width: 685px;
+            /* margin-left: 500px; */
+            height: 25px;
+        }
+        .img1{
+            width: 650px;
+            height: 570px;
+            margin-left: 800px;
+            margin-top: -483px;
+        }
+        .img2{
+            width: 130px;
+            height: 55px;
+            margin-left: 110px;
+            margin-top: 40px;
+        }
+
+        }
+
+  
+
+
+
+        .img{
+            width: 1360px;
+            height: 555px;
+        }
+        .img1{
+            width: 650px;
+            height: 570px;
+            margin-left: 700px;
+            margin-top: -483px;
+        }
+        .img2{
+            width: 130px;
+            height: 55px;
+            margin-left: 110px;
+            margin-top: 40px;
+        }
+        .pics img{
+            width: 220px;
+            height: 400px;
+            margin-left: 90px;
+            border-radius: 10px;
+            float: left;
+        }
+        .pic img{
+            width: 220px;
+            height: 400px;
+            margin-left: 20px;
+            border-radius: 10px;
+            float: left;
+        }
+        .brg img{
+            width: 220px;
+            height: 400px;
+            margin-left: 20px;
+            border-radius: 10px; 
+            float: left;
+        }
+        .brgs img{
+             width: 220px;
+            height: 400px;
+            margin-left: 20px;
+            border-radius: 10px; 
+            float: left;
+        }
+        .chn img{
+            width: 220px;
+            height: 400px;
+            border-radius: 10px; 
+            float: right;
+            margin-right: 80px;
+            
+        }
+
+          .soup{
+            list-style: none;
+         }
+           .soup a{
+            color: #fff;
+            width: 50px;
+            height: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            margin-left: 120px;
+            margin-top: 10px;
+            text-decoration: none;
+            float: left;
+         }
+           .snd{
+            list-style: none;
+          }
+           .snd a{
+            color: #fff;
+            width: 50px;
+            height: 100px;
+            line-height: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            margin-left: 200px;
+            text-decoration: none;
+            float: left;
+         }
+          .brg{
+            list-style: none;
+         }
+          .brg a{
+            color: #fff;
+            width: 100px;
+            height: 100px;
+            line-height: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            margin-left: 670px;
+            margin-top: -100px;
+            text-decoration: none;
+            float: left;
+         }
+          .fam{
+            list-style: none;
+         }
+          .fam a{
+            color: #fff;
+            width: 200px;
+            height: 100px;
+            line-height: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            margin-left: 150px;
+            text-decoration: none;
+            float: left;
+         }
+         .chn{
+            list-style: none;
+         }
+         .chn a{
+            color: #fff;
+            width: 200px;
+            height: 100px;
+            line-height: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            margin-left: 1050px;
+            margin-top: -110px;
+            text-decoration: none;
+            float: left;
+         }
+         .plat{
+            width: 700px;
+            height: 450px;
+            margin-top: 90px;
+            
+         }
+         .taste{
+            width: 530px;
+            height: 450px;
+            color:#fff;
+            font-family: "butler";
+            margin-left: 110px;
+            margin-top: -10px;
+            font-size: 43px;
+            font-weight: bolder;
+         }
+         .tste{
+            width: 530px;
+            height: 450px;
+            color:#fff;
+            font-family: "butler";
+            margin-left: 110px;
+            margin-top: -10px;
+            font-size: 43px;
+            font-weight: bolder;
+         }
+         .box{           
+            width: 650px;
+            height: 450px;
+            background-color: rgb(17, 17, 17);
+            margin-top: -470px;
+            margin-left: 700px;
+         }
+         .box p{
+            font-family:'Times New Roman', Times, serif;
+            color: #fff;
+            margin-top: -400px;
+            text-align: left;
+            font-size: 20px;
+            margin-left: 110px;
+            margin-right: 90px;
+         }
+         .box1{
+            margin-top: 100px;
+            width: 1360px;
+            height: 550px;
+            background-color: rgb(17, 17, 17);
+         }
+         .box2{
+            margin-top: 70px;
+            width: 1360px;
+            height: 600px;
+            background-color: rgb(17, 17, 17);
+         }
+         .term{
+           font-family:'Times New Roman', Times, serif;
+            color: #f8f4f4;
+            margin-top: 30px;
+            text-align: left;
+            font-size: 17.5px;
+            margin-left: 110px;
+            margin-right: 790px;
+         }
+         .Privacy{
+           font-family:'Times New Roman', Times, serif;
+            color: #f8f4f4;
+            margin-top: -37px;
+            /* text-align: left; */
+            font-size: 17.5px;
+            margin-left: 255px;
+            margin-right: 790px;
+         }
+         .pr{
+             font-family:'Times New Roman', Times, serif;
+            color:  #c9c7c7;
+            margin-top: 30px;
+            text-align: left;
+            font-size: 17.5px;
+            margin-left: 110px;
+            margin-right: 870px;
+         }
+         .p{
+            font-family:'Times New Roman', Times, serif;
+            color: #fff;
+            text-align: left;
+            font-size: 15px;
+            margin-left: 110px;
+            margin-right: 790px;
+         }
+         .head{
+            font-family: 'Apercu';
+            padding-top: 80px;
+            font-weight: 40px;
+            font-size: 16px;
+            margin-left: 110px;
+            text-align: left;
+            letter-spacing: 0.48em;
+            color: #ED1C24;
+        }
+        .hed{
+            font-family: 'Apercu';
+            padding-top: 40px;
+            font-weight: 40px;
+            font-size: 16px;
+            margin-left: 110px;
+            text-align: left;
+            letter-spacing: 0.48em;
+            color: #ED1C24;
+        }
+        .btn{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            color: #fff;
+            width: 115px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid#fff;
+            border-radius: 30px;
+            margin-top: 30px;
+            margin-left: 95px;
+        }
+        .btn:hover{
+            color: rgb(214, 206, 206);
+            font-size: 18px;
+            box-shadow: 0 4px 25px rgba(255, 255, 255, 0.35);
+            background: radial-gradient(circle, rgb(110, 117, 156) 0%, rgb(80, 66, 94) 100%);
+        }
+        .bttn{
+            background-color: #ed1c24;
+            font-family:'Times New Roman', Times, serif;
+            font-weight: bold;
+            color: white;
+            border: 2px solid #ed1c24;
+            height: 50px;
+            border-radius: 25px;
+            margin-top: 35px;
+            padding: 10px;
+            margin-left: 120px;
+        }
+        .bttn:hover{
+            color: rgb(247, 247, 253);
+            font-size: 16px;
+            border:2px solid white;
+            background: radial-gradient(circle, rgb(110, 143, 138) 0%, rgb(129, 75, 129) 100%) ;
+        }
+        .food{
+            width: 350px;
+            height: 250px;
+            margin-left: 115px;
+            margin-bottom: 20px;
+        }
+        .food1{
+            width: 400px;
+            height: 250px;
+            margin-left: 25px;
+        }
+        .food2{
+            width: 370px;
+            height: 225px;
+            float: right;
+            margin-right: 105px;
+            margin-top: -267px;
+        }
+        .food3{
+             width: 350px;
+            height: 240px;
+            margin-left: 120px;
+            margin-bottom: 25px;
+        }
+        .food4{
+            width: 470px;
+            height: 300px;
+            margin-top: 10px;
+        }
+        .food5{
+            width: 370px;
+            height: 260px;
+            float: right;
+            margin-right: 65px;
+            margin-top: -267px;
+        }
+        .deal{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: #fff;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 0px;
+        }
+        .sp{
+            margin-left: -50px;
+           
+        }
+        .del{
+           margin-left: 125px;
+        }
+        .vip{
+            margin-left: 55px;
+            margin-right: 80px;
+        }
+        .deal1{
+             font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: #fff;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        .bbq{
+             margin-left: 190px;
+             
+        }
+        .del2{
+            margin-left: -220px;
+            /* margin-right: 120px; */
+        }
+        .vip2{
+             margin-left: -290px;
+            /* margin-right: 230px; */
+        }
+        .quality{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            margin-left: 165px;
+            margin-top: -10px;
+            color: #fff;
+        }
+        .quantity{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            margin-left: 580px;
+            margin-top: -40px;
+            color: #fff;
+        }
+        .qun{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            margin-left: 980px;
+            margin-right: -90px;
+            margin-top: -23px;
+            color: #fff;
+        }
+        .label{
+            margin-top: 50px;
+        }
+        .rs{
+            color: #fff;
+            margin-left: 250px;
+        }
+        .rs1{
+            color: #fff;
+            margin-left: 330px;
+        }
+        .rs2{
+            color: #fff;
+            margin-left: 335px;
+        }
+        .i{
+            background-color: #ED1C24;
+            width: 20px;
+            height: 18px;
+            color: #fff;
+            margin-left: 280px;
+            margin-top: 19px;
+        }
+        .i1{
+            background-color: #ED1C24;
+            width: 20px;
+            height: 18px;
+            color: #fff;
+            margin-left: 690px;
+            margin-top: -18px;
+        }
+        .i2{
+            background-color: #ED1C24;
+            width: 20px;
+            height: 18px;
+            color: #fff;
+            margin-left: 1110px;
+            margin-top: -18px;
+        }
+        .p{
+             font-family:Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            margin-left: 110px;
+            margin-top: -310px;
+            /* margin-bottom: -3000px; */
+            color: #fff;
+        }
+        .h2{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            padding-top: 15px;
+            margin-left: 110px;
+        }
+        .p1{
+            font-family: 'Times New Roman', Times, serif;
+            color: #fff;
+            text-align: center;
+            margin-top: -550px;
+            margin-left: -120px;
+        }
+        .links{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #c9c7c7;
+            text-align: left;
+            font-size: 22px;
+            margin-left: 575px;
+            margin-top: -10px;
+        }
+        .links a{
+            color: #c9c7c7;
+            text-decoration: none;
+        }
+        .p2{
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            font-size: 16px;
+            text-align: left;
+            margin-top: -410px;
+            margin-left: 730px;
+            margin-right: 370px;
+        }
+        .p2 a{
+            color: #c9c7c7;
+            text-decoration: none;
+        }
+        .follow{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 22px;
+            color: #fff;
+            text-align: right;
+            margin-top: -503px;
+            margin-right: 240px;
+            
+        }
+        .ic{
+            display: flex;
+            gap: 5px;    
+            color: #fff;
+            float: right;
+            margin-top: 10px;
+            margin-right: 195px;            
+        }
+        #ic1{
+            background-color: #ed1c24;
+            width: 40px;
+            height: 30px;
+            border-radius:50%;
+            top: -10px;
+            padding-top: 10px;
+
+        }
+        #ic2{
+            background-color: #ed1c24;
+            width: 40px;
+            height: 30px;
+            border-radius: 50%;
+            padding-top: 10px;
+
+        }
+        #ic3{
+            background-color: #ed1c24;
+            width: 40px;
+            height: 30px;
+            border-radius: 50%;
+            padding-top: 10px;
+        }
+        #ic1:hover{
+            color: yellowgreen;
+        }
+        #ic2:hover{
+            color: yellowgreen;
+        }
+        #ic3:hover{
+            color: yellowgreen;
+        } 
+
+    
+    .cart-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .cart-container {
+      display: none;
+      position: absolute;
+      top: -50px;
+      margin-left: -3px;
+      width: 370px;
+      height: 635px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      /* z-index: 1000; */
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    #cart-toggle {
+      display: none;
+    }
+    .cart-label {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+    }
+    .cart-badge {
+      position: absolute;
+      top: -8px;
+      right: -18px;
+      width: 20px;
+      height: 20px;
+      background-color: #ff0238;
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #cart-toggle:checked ~ .cart-container {
+      display: block;
+    }
+    .cart-header {
+      display: flex;
+      text-align: left;
+      color: #000;
+      padding: 10px 15px;
+      border-bottom: 10px;
+    }
+
+    .btn1 {
+      font-size: 24px;
+      margin-right: 10px;
+      margin-left: 30px;
+      cursor: default;
+    }
+
+    .cart-body {
+      /* padding: 120px 20px 20px; */
+      margin-top: 220px;
+      text-align: center;
+      height: 150px;
+      color: #666;
+    }
+
+    .min-order {
+      background: #FFC2C3;
+      color: #000;
+      font-size: 14px;
+      padding: 15px;
+      margin-top: 50px;
+      border-top: 1px solid #ff0238;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .checkout-btn {
+      width: 85%;
+      margin: 20px auto;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #222;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: not-allowed;
+      display: block;
+    }
+    .cross{
+        cursor: pointer;
+        margin-top: 12px;
+        margin-left: -5px;
+    }
+    
+
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div>
+                <div><img src="salt.webp" alt="Salt n Pepper" class="logo"></div>
+                 <!-- toggle for mobile -->
+    <input type="checkbox" id="menu" style="display: none;">
+    <label for="menu" class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+          <div>
+              <ul class="main">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="Publications.html">Publications</a></li>
+                <li><a href="Branches.html">Branches</a></li> 
+                 <div class="cart-wrapper">
+    <input type="checkbox" id="cart-toggle">
+    <label for="cart-toggle" class="cart-label">
+      <li><i class="fa-solid fa-cart-shopping fa-xl"></i></li>
+      <span class="cart-badge">0</span>
+    </label>
+    <div class="cart-container">
+      <div class="cart-header">
+        <label for="cart-toggle" class="cross" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></label>
+        <h2 class="btn1">Your Cart</h2>
+      </div>
+      <hr>
+      <div class="cart-body">
+        <p>Your cart is empty</p></div>
+      <div class="cart-footer">
+        <p class="min-order">Min order amount must be greater than PKR 1000</p>
+        <button class="checkout-btn" disabled>Checkout</button></div>
+    </div>
+  </div>
+                <li><a href="online  order.html"><button class="button">Order Online</button></li></a></ul></nav>
+                <!-- <i class="fa-solid fa-arrow-right" id="icn1"></i>
+                <i class="fa-solid fa-circle fa-xl" id="icn"></i> -->
+                <img src="9386028a-054c-47eb-a9a0-937d033c290f.webp" class="img">
+                <h2 class="heading">Choose by Catagory</h2></div>
+                <div class="pics">
+                <img src="soup.webp"></div>
+                <div class="pic">
+                <img src="sandwiches.webp"></div>
+                <div class="brg">
+                <img src="famous burger.webp"></div>
+                <div class="brgs">
+                <img src="giant burger.webp"></div>
+                <div class="chn">
+                <img src="chicken.webp"></div>
+                <div>
+                    <ul>
+                        <li class="soup"><a href="#">Soups</a></li>
+                        <li class="snd"><a href="#">Sandwiches</a></li>
+                        <li class="fam"><a href="#">Our Famous Burger</a></li>
+                        <li class="brg"><a href="#">Giant Burger</a></li>
+                        <li class="chn"><a href="#">Chicken Continental</a></li>
+                    </ul>
+                </div>
+                <img src="platter.webp" class="plat">
+                <div class="box">
+                    <h3 class="head">SALT'N PEPPER RESTURANT</h3>
+                    <h1 class="taste">Discover The Taste!</h1>
+                    <p>The Salt’n Pepper is Pakistan’s most recognized and distinguished hospitality brand with a history of market innovation and excellence in restaurants chain operation. The Salt’n Pepper Restaurants are regarded and respected as the number one restaurant entity in Pakistan by local and foreign observers.</p>
+                    <button class="btn">Learn more</button>
+                </div>
+                <h2 class="heading">Our Deals</h2>
+                <img src="superior.webp" class="food">
+                <img src="deluxe.webp" class="food1">
+                <img src="vip.webp" class="food2">
+                <ul class="deal">
+                    <li><a href="#" class="sp"></a>Superior</li>
+                    <li><a href="#" class="del"></a>Deluxe</li>
+                    <li><a href="#" class="vip"></a>VIP</li>
+                </ul> 
+                <p class="quality">Chicken Fillet (3 Pcs), Chicken Sandwich Cold (2 Pcs),</p><br>
+                <p class="quantity">Fried Chicken Sandwich, Chicken Nuggets (4 Pcs),</p>
+                <p class="qun">Chicken Shashlik (1/2 Portion), Chicken Sandwich Cold (2</p>
+                <div class="label">
+                 <label for="number" class="rs">Rs 1,650.00</label>
+                 <label for="number" class="rs1">Rs 2,050.00</label>
+                 <label for="number" class="rs2">Rs 2,190.00</label></div>
+                 <div class="i">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i1">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i2">
+                  <i class="fas fa-plus"></i></div>
+                 <img src="Pakistani B.B.Q.webp" class="food3">
+                 <img src="Pakistani Deluxe.webp" class="food4">
+                 <img src="Pakistani VIP.webp" class="food5">
+
+                 <ul class="deal1">
+                    <li><a href="#" class="bbq"></a>Pakistani B.B.Q</li>
+                    <li><a href="#" class="del2"></a>Pakistani Deluxe</li>
+                    <li><a href="#" class="vip2"></a>Pakistani VIP</li>
+                </ul> 
+                <p class="quality">Chicken Tikka (1 Piece), Chicken Seekh Kabab (3 Pcs),</p><br>
+                <p class="quantity">Boneless Chicken Handi (Portion), Chicken Seekh Kabab</p>
+                <p class="qun">Boneless Chicken Handi (Portion), Boneless Chicken Boti</p>
+                <div class="label">
+                 <label for="number" class="rs">Rs 2,290.00</label>
+                 <label for="number" class="rs1">Rs 2,150.00</label>
+                 <label for="number" class="rs2">Rs 2,450.00</label></div>
+                  <div class="i">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i1">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i2">
+                  <i class="fas fa-plus"></i></div> 
+                  <div class="box1">
+                    <h3 class="hed">MENU OF THE WEEK</h3>
+                    <h1 class="tste">Something Special<br> For You To Try This<br> Month!</h1>
+                    <p class="p">Chicken Chilli Dry (1/2 Portion), Chicken Drumstick (2 Pcs), Egg Fried Rice, Chicken Chow-mein, Dessert</p>
+                    <h3 class="h2">Chinese<br><br>Rs.2170 Plus Tax</h3>
+                    <button class="bttn">Order Online</button>
+                    <img src="Chinese.webp" class="img1">
+                </div>
+                <div class="box2">
+                <img src="salt.webp" class="img2">
+                <p class="pr">The Salt’n Pepper Restaurants are an example of gracious dinning, outstanding service, extraordinary classic and contemporary cuisine. The restaurants have become the ultimate dinning destinations in Lahore. From family occasions to business dinner and moments of the heart, this place is where unforgettable memories are made.</p>
+                <p class="term">Term &Conditions </p>
+                <p class="Privacy">Privacy Policy</p>
+                </div>
+                <h3 class="p1">Site Links</h3>
+                <div class="links">
+                 <h5><a href="resturent.html">Home</h5></a>
+                 <h5><a href="about us.html">About us</h5></a>
+                 <h5><a href="#">Deals</h5></a>
+                 <h5><a href="#">Photos</h5></a>
+                 <h5><a href="Publications.html">Publications</h5></a>
+                 <h5><a href="#">Feedback</h5></a>
+                 <h5><a href="#">Contact us</h5></a></div>
+                <div class="p2">
+                <h4><a href="#">Contact Us</h4></a>
+                <h3>Head Office Address</h3>
+                <h5><a href="#">Foodconsults (Pvt) Ltd</h5></a>
+                <h5><a href="#">23-Usman Block, New GardenTown, Lahore, Pakistan</h5></a>
+                <h3>Head Office Number</h3>
+                <h5><a href="#">+92 42 358 509 31</h5></a>
+                <h5><a href="#">+92 42 358 509 30</h5> </a>
+                <h3>Email Address</h3>
+                <h5><a href="#">snpfood@brain.net.pk</h5></a>
+                <h3>Free Delivery Number</h3>
+                <h5><a href="#">+92 42 111 100 678</h5></a>
+                <h5><a href="#">+92 03 111 444 610</h5></a></div>
+            </div>
+            <div class="follow">Follow Us</div>
+            <div class="ic">
+            <i class="fa-brands fa-instagram" id="ic1"></i>
+            <i class="fa-brands fa-facebook-f" id="ic2"></i>
+            <i class="fa-brands fa-twitter" id="ic3"></i></div>
+
+
+
+
+
+
+    

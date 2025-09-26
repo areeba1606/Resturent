@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="online order.css" type="text/css">
+    <link rel="shortcut icon" href="salt icon.ico">
+    <script src="online  order.html"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+                <div><img src="salt.webp" alt="Salt n Pepper" class="logo"></div>
+          <div>
+              <ul class="main">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="Publications.html">Publications</a></li>
+                <li><a href="Branches.html">Branches</a></li>
+                <div class="cart-wrapper">
+    <input type="checkbox" id="cart-toggle">
+    <label for="cart-toggle" class="cart-label">
+      <li><i class="fa-solid fa-cart-shopping fa-xl"></i></li>
+      <span class="cart-badge">0</span>
+    </label>
+    <div class="cart-container">
+      <div class="cart-header">
+         <label for="cart-toggle" class="cross" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></label>
+        <h2 class="btn1">Your Cart</h2>
+      </div>
+      <hr>
+      <div class="cart-body">
+        <p>Your cart is empty</p></div>
+      <div class="cart-footer">
+        <p class="min-order">Min order amount must be greater than PKR 1000</p>
+        <button class="checkout-btn" disabled>Checkout</button></div>
+    </div>
+  </div>
+                <li><a href="online  order.html"><button class="button">Order Online</button></li></a></ul>
+                <hr class="hr">
+                <div class="menu-container">
+  <div class="arrow arrow-left" onclick="scrollMenu(-200)"><i class="fa-solid fa-angle-left"></i></div>
+         <nav class="menu-items" id="menu">
+                <a href="#" class="active" id="menu-item">All</a>
+                <a href="#" id="menu-item">Soups</a>
+                <a href="#" id="menu-item">Sharing Bites</a>
+                <a href="#" id="menu-item">Sandwiches</a>
+                <a href="#" id="menu-item">Our Famous Burger</a>
+                <a href="#" id="menu-item">Giant Burgers</a>
+                <a href="#" id="menu-item">Chicken Continentel</a>
+                <a href="#" id="menu-item">Steaks</a>
+                <a href="#" id="menu-item">Chinese</a>
+                <a href="#" id="menu-item">Pizza</a>
+                <a href="#" id="menu-item">B.B.Q</a>
+                <a href="#" id="menu-item">Desi Delights</a>
+                <a href="#" id="menu-item">Salads / Sides</a>
+                <a href="#" id="menu-item">Nans / Roti</a>
+                <a href="#" id="menu-item">Pepsi Products</a>
+           </nav>
+           <div class="arrow arrow-right" onclick="scrollMenu(200)"><i class="fa-solid fa-angle-right"></i></div>
+           
+            <div class="fd">
+                <img src="chicken soup.webp" class="food">
+                <img src="corn soup.webp" class="food1">
+                <img src="corn family.webp" class="food2">
+                <ul class="deal">
+                    <li><a href="#" class="sp">Chicken & Mushroom Cream Soup(Single)</a></li>
+                    <li><a href="#" class="del">Chicken Corn Soup(Single)</a></li>
+                    <li><a href="#" class="vip">Chicken Corn Soup(Family)</a></li>
+                </ul> 
+                <p class="quality">A rich and creamy chicken soup enhanced with mushrooms.</p><br>
+                <p class="quantity">A classic soup that introduced Chinese cuisine to Pakistan in</p>
+                <p class="qun">A classic soup that introduced Chinese cuisine to Pakistan in</p>
+                <div class="label">
+                 <label for="number" class="rs">Rs 790.00</label>
+                 <label for="number" class="rs1">Rs 580.00</label>
+                 <label for="number" class="rs2">Rs 1,740.00</label></div>
+                 <div class="i">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i1">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i2">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd1">
+                <img src="hot soup.webp" class="food3">
+                <img src="sour soup.webp" class="food4">
+                <img src="mul soup.webp" class="food5">
+                <ul class="deal1">
+                    <li><a href="#" class="sp1"></a>Hot & Sour Soup (Single)</li>
+                    <li><a href="#" class="del1"></a>Hot & Sour Soup (Family)</li>
+                    <li><a href="#" class="vip1"></a>Mulligatawny Soup (Single)</li>
+                </ul> 
+                <p class="quality1">This popular soup has become more Pakistani than Chinese,</p><br>
+                <p class="quantity1">This popular soup has become more Pakistani than Chinese,</p>
+                <p class="qun1">The all time favorite soup of the sub-continent.</p>
+                <div class="label1">
+                 <label for="number" class="rs3">Rs 680.00</label>
+                 <label for="number" class="rs4">Rs 1,950.00</label>
+                 <label for="number" class="rs5">Rs 750.00</label></div>
+                 <div class="i3">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i4">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i5">
+                  <i class="fas fa-plus"></i></div>    
+            <div class="fd2">
+                <img src="rings.webp" class="food6">
+                <img src="fillet.webp" class="food7">
+                <img src="drumsticks.webp" class="food8">
+                <ul class="deal2">
+                    <li><a href="#" class="sp2"></a>Chicken Fillet (3 Pcs)</li>
+                    <li><a href="#" class="del2"></a>Onion Rings (6 Pcs)</li>
+                    <li><a href="#" class="vip2"></a>Chinese Chicken Drumsticks (3 Pcs)</li>
+                </ul> 
+                <p class="quality2">Crunchy and tender chicken fillets, crumb-fried to perfection.</p><br>
+                <p class="quantity2">Crispy onion rings served with a tangy dipping sauce.,</p>
+                <p class="qun2">Served with sweet chilli and tangy sauce for a flavorful kick.</p>
+                <div class="label2">
+                 <label for="number" class="rs6">Rs 950.00</label>
+                 <label for="number" class="rs7">Rs 550.00</label>
+                 <label for="number" class="rs8">Rs 790.00</label></div>
+                 <div class="i6">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i7">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i8">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd3">
+                <img src="loaded fries.webp" class="food9">
+                <img src="kabab.webp" class="food10">
+                <img src="nuggets.webp" class="food11">
+                <ul class="deal3">
+                    <li><a href="#" class="sp3"></a>Loaded Fries</li>
+                    <li><a href="#" class="del3"></a>Sangam Gola Kabab(4 pcs)</li>
+                    <li><a href="#" class="vip3"></a>Chicken  Nuggets(4 pcs)</li>
+                </ul> 
+                <p class="quality3">Crispy fries loaded with melted cheese, mayonnaise, and jalapenos.</p><br>
+                <p class="quantity3">A blend of beef and chicken seasoned with herbs and</p>
+                <p class="qun3">Authentic handmade nuggets, crispy on the outside and</p>
+                <div class="label3">
+                 <label for="number" class="rs9">Rs 990.00</label>
+                 <label for="number" class="rs10">Rs 660.00</label>
+                 <label for="number" class="rs11">Rs 790.00</label></div>
+                 <div class="i9">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i10">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i11">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd4">
+                <img src="cheese nuggets.webp" class="food12">
+                <img src="bread.webp" class="food13">
+                <img src="naan.webp" class="food14">
+                <ul class="deal4">
+                    <li><a href="#" class="sp4"></a>Stuffed Chicken Cheese Nuggets (4 Pcs)</li>
+                    <li><a href="#" class="del4"></a>Jalapeno Cheese Garlic Bread (4 Pcs)</li>
+                    <li><a href="#" class="vip4"></a>Stuffed Cheese & Green Chilli Naan</li>
+                </ul> 
+                <p class="quality4">Crispy fries loaded with melted cheese, mayonnaise, and jalapenos.</p><br>
+                <p class="quantity4">A blend of beef and chicken seasoned with herbs and</p>
+                <p class="qun4">Authentic handmade nuggets, crispy on the outside and</p>
+                <div class="label4">
+                 <label for="number" class="rs12">Rs 990.00</label>
+                 <label for="number" class="rs13">Rs 660.00</label>
+                 <label for="number" class="rs14">Rs 790.00</label></div>
+                 <div class="i12">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i13">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i14">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd5">
+                <img src="jumbo.webp" class="food15">
+                <img src="roast.webp" class="food16">
+                <img src="spicy.webp" class="food17">
+                <ul class="deal5">
+                    <li><a href="#" class="sp5"></a>Jumbo Club Sandwich</li>
+                    <li><a href="#" class="del5"></a>Grilled Roast Beef & Cheese Sandwich</li>
+                    <li><a href="#" class="vip5"></a>Spicy Chicken Pocket Sandwich</li>
+                </ul> 
+                <p class="quality5">Made with four pieces of bread. Will definitely take care of</p><br>
+                <p class="quantity5">Our premier sandwich. Served with French fries & coleslaw.</p>
+                <p class="qun5">Our Creation since 1985 -------- still going strong. Served</p>
+                <div class="label5">
+                 <label for="number" class="rs15">Rs 1,450.00</label>
+                 <label for="number" class="rs16">Rs 1,950.00</label>
+                 <label for="number" class="rs17">Rs 1,290.00</label></div>
+                 <div class="i15">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i16">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i17">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd6">
+                <img src="fried.webp" class="food18">
+                <img src="club.webp" class="food19">
+                <img src="chicken sandwich.webp" class="food20">
+                <ul class="deal6">
+                    <li><a href="#" class="sp6"></a>Fried Chicken Breast Sandwich</li>
+                    <li><a href="#" class="del6"></a>Club Sandwich</li>
+                    <li><a href="#" class="vip6"></a>Chicken Sandwich</li>
+                </ul> 
+                <p class="quality6">Crispy fried chicken paired with fresh tomatoes and</p><br>
+                <p class="quantity6">The mother of all sandwiches. Served with French fries and</p>
+                <p class="qun6">(Toasted Or Cold). Served with French fries and coleslaw.</p>
+                <div class="label6">
+                 <label for="number" class="rs18">Rs 1,360.00</label>
+                 <label for="number" class="rs19">Rs 1,150.00</label>
+                 <label for="number" class="rs20">Rs 1,150.00</label></div>
+                 <div class="i18">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i19">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i20">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd7">
+                <img src="grilled.webp" class="food21">
+                <img src="egg.webp" class="food22">
+                <ul class="deal7">
+                    <li><a href="#" class="sp7"></a>Grilled Chicken Breast Sandwich</li>
+                    <li><a href="#" class="del7"></a>Chicken Cheese & Egg Sandwich</li>
+                </ul> 
+                <p class="quality7">Juicy grilled chicken breast layered with tomatoes and</p><br>
+                <p class="quantity7">Our version of a toastie. Served with French fries and</p>
+                <div class="label7">
+                 <label for="number" class="rs21">Rs 1,360.00</label>
+                 <label for="number" class="rs22">Rs 1,390.00</label>
+                  <div class="i21">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i22">
+                 <i class="fas fa-plus"></i></div>
+            <div class="fd8">
+                <img src="beef.webp" class="food23">
+                <img src="beef cheese.webp" class="food24">
+                <img src="chicken burger.webp" class="food25">
+                <ul class="deal8">
+                    <li><a href="#" class="sp8"></a>Beef Cheese Burger</li>
+                    <li><a href="#" class="del8"></a>Beef Cheese & Jalapeno Burger</li>
+                    <li><a href="#" class="vip8"></a>Chicken Burger</li>
+                </ul> 
+                <p class="quality8">Original, no-nonsense beef burger. Served with French fries</p><br>
+                <p class="quantity8">Beef burger with a zing. Served with French fries and coleslaw.</p>
+                <p class="qun8">Consistently good. Served with French fries and coleslaw.</p>
+                <div class="label8">
+                 <label for="number" class="rs23">Rs 1,690.00</label>
+                 <label for="number" class="rs24">Rs 1,790.00</label>
+                 <label for="number" class="rs25">Rs 1,150.00</label></div>
+                 <div class="i23">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i24">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i25">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd9">
+                <img src="fried burger.webp" class="food26">
+                <img src="grilled burger.webp" class="food27">
+                <img src="jalapeno burger.webp" class="food28">
+                <ul class="deal9">
+                    <li><a href="#" class="sp9"></a>Fried Chicken Breast Burger</li>
+                    <li><a href="#" class="del9"></a>Grilled Chicken Breast Burger</li>
+                    <li><a href="#" class="vip9"></a>Fried Chicken Jalapeno Burger</li>
+                </ul> 
+                <p class="quality9">Crispy fried chicken layered with fresh tomatoes and</p><br>
+                <p class="quantity9">Grilled chicken breast paired with fresh tomatoes and</p>
+                <p class="qun9">Crispy fried chicken topped with spicy jalapenos and fresh</p>
+                <div class="label9">
+                 <label for="number" class="rs26">Rs 1,390.00</label>
+                 <label for="number" class="rs27">Rs 1,390.00</label>
+                 <label for="number" class="rs28">Rs 1,450.00</label></div>
+                 <div class="i26">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i27">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i28">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd10">
+                <img src="dynamite.webp" class="food29">
+                <img src="mix.webp" class="food30">
+                <img src="double.webp" class="food31">
+                <ul class="deal10">
+                    <li><a href="#" class="sp10"></a>Dynamite Burger</li>
+                    <li><a href="#" class="del10"></a>Mix & Match Burger</li>
+                    <li><a href="#" class="vip10"></a>Double Beef Cheese Burger</li>
+                </ul> 
+                <p class="quality10">A bold burger with a kick of buffalo sauce, delivering spicy</p><br>
+                <p class="quantity10">A delightful blend of fried chicken and a regular chicken</p>
+                <p class="qun10">Outrageously good. Served with French fries and coleslaw</p>
+                <div class="label10">
+                 <label for="number" class="rs29">Rs 1,550.00</label>
+                 <label for="number" class="rs30">Rs 1,750.00</label>
+                 <label for="number" class="rs31">Rs 2,390.00</label></div>
+                 <div class="i29">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i30">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i31">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd11">
+                <img src="supreme.webp" class="food32">
+                <img src="spicy supreme.webp" class="food33">
+                <img src="ultimate.webp" class="food34">
+                <ul class="deal11">
+                    <li><a href="#" class="sp11"></a>Supreme Chicken Burger</li>
+                    <li><a href="#" class="del11"></a>Spicy Supreme Chicken Burger</li>
+                    <li><a href="#" class="vip11"></a>The Ultimate Chicken Burger</li>
+                </ul> 
+                <p class="quality11">Double chicken patties stacked with fresh tomatoes and</p><br>
+                <p class="quantity11">Two spicy chicken patties layered with fresh tomatoes,</p>
+                <p class="qun11">A combination of two chicken patties, boiled egg, cheese,</p>
+                <div class="label11">
+                 <label for="number" class="rs32">Rs 1,720.00</label>
+                 <label for="number" class="rs33">Rs 1,730.00</label>
+                 <label for="number" class="rs34">Rs 1,850.00</label></div>
+                 <div class="i32">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i33">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i34">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd12">
+                <img src="stuffed.webp" class="food35">
+                <img src="pineapple.webp" class="food36">
+                <img src="chilli.webp" class="food37">
+                <ul class="deal12">
+                    <li><a href="#" class="sp12"></a>Stuffed Chicken Breast</li>
+                    <li><a href="#" class="del12"></a>Stuffed Chicken Breast With Pineapple Sauce</li>
+                    <li><a href="#" class="vip12"></a>Stuffed Chicken Breast With Chilli Marmalade</li>
+                </ul> 
+                <p class="quality12">We introduced this famous dish in 1986, and it remains</p><br>
+                <p class="quantity12">We introduced this famous dish in 1986, and it remains</p>
+                <p class="qun12">We introduced this famous dish in 1986, and it remains</p>
+                <div class="label12">
+                 <label for="number" class="rs35">Rs 1,750.00</label>
+                 <label for="number" class="rs36">Rs 1,940.00</label>
+                 <label for="number" class="rs37">Rs 1,940.00</label></div>
+                 <div class="i35">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i36">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i37">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd13">
+                <img src="shaskil.webp" class="food38">
+                <img src="black.webp" class="food39">
+                <img src="chick.webp" class="food40">
+                <ul class="deal13">
+                    <li><a href="#" class="sp13"></a>Chicken shashlik</li>
+                    <li><a href="#" class="del13"></a>Black Pepper Chicken</li>
+                    <li><a href="#" class="vip13"></a>Chicken Nuggets(8 pcs)</li>
+                </ul> 
+                <p class="quality13">Boneless chicken, tomatoes, capsicum, and onions cooked in</p><br>
+                <p class="quantity13">Boneless chicken stir-fried with cucumber, carrots, and</p>
+                <p class="qun13">Authentic, handmade nuggets served with French fries and</p>
+                <div class="label13">
+                 <label for="number" class="rs38">Rs 1,670.00</label>
+                 <label for="number" class="rs39">Rs 1,690.00</label>
+                 <label for="number" class="rs40">Rs 1,670.00</label></div>
+                 <div class="i38">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i39">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i40">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd14">
+                <img src="cheeese.webp" class="food41">
+                <img src="margrita.webp" class="food42">
+                <img src="fill.webp" class="food43">
+                <ul class="deal14">
+                    <li><a href="#" class="sp14"></a>Stuffed Chicken Cheese Nuggets (8 Pcs)</li>
+                    <li><a href="#" class="del14"></a>Margherita Chicken</li>
+                    <li><a href="#" class="vip14"></a>Chicken Fillet (5 Pcs)</li>
+                </ul> 
+                <p class="quality14">A delightful combination of chicken and melted cheddar</p><br>
+                <p class="quantity14">Crispy fried chicken breast topped with pizza sauce and</p>
+                <p class="qun14">The most tender parts of a chicken are it’s two fillets. Here,</p>
+                <div class="label14">
+                 <label for="number" class="rs41">Rs 1,950.00</label>
+                 <label for="number" class="rs42">Rs 1,750.00</label>
+                 <label for="number" class="rs43">Rs 1,650.00</label></div>
+                 <div class="i41">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i42">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i43">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd15">
+                <img src="original.webp" class="food44">
+                <img src="steak.webp" class="food45">
+                <img src="pine.webp" class="food46">
+                <ul class="deal15">
+                    <li><a href="#" class="sp15"></a>Original Black Pepper Steak Beef</li>
+                    <li><a href="#" class="del15"></a>Beef Fillet Steak</li>
+                    <li><a href="#" class="vip15"></a>Chicken Pineapple Steak</li>
+                </ul> 
+                <p class="quality15">A tender beef fillet encrusted with cracked black pepper,</p><br>
+                <p class="quantity15">A tender beef fillet grilled to perfection. Served with baked</p>
+                <p class="qun15">Grilled chicken breast topped with sweet, caramelized</p>
+                <div class="label15">
+                 <label for="number" class="rs44">Rs 2,950.00</label>
+                 <label for="number" class="rs45">Rs 2,750.00</label>
+                 <label for="number" class="rs46">Rs 1,990.00</label></div>
+                 <div class="i44">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i45">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i46">
+                  <i class="fas fa-plus"></i></div>
+
+
+                  <div class="fd16">
+                <img src="grilled steak.webp" class="food47">
+                <img src="pan.webp" class="food48">
+                <ul class="deal16">
+                    <li><a href="#" class="sp16"></a>Grilled Chicken Breasts Steak</li>
+                    <li><a href="#" class="del16"></a>Pan Fried Black Pepper Chicken Steak</li>
+                </ul> 
+                <p class="quality16">Twin marinated grilled chicken breasts served with your</p><br>
+                <p class="quantity16">Chicken breasts encrusted with cracked black pepper, pan-</p>
+                <div class="label16">
+                 <label for="number" class="rs47">Rs 1,850.00</label>
+                 <label for="number" class="rs48">Rs 2,250.00</label>
+                  <div class="i47">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i48">
+                 <i class="fas fa-plus"></i></div>
+            <div class="fd17">
+                <img src="stir.webp" class="food49">
+                <img src="fire.webp" class="food50">
+                <img src="chow.webp" class="food51">
+                <ul class="deal17">
+                    <li><a href="#" class="sp17"></a>Stir-Beef Beef</li>
+                    <li><a href="#" class="del17"></a>Fire Cracker Chicken</li>
+                    <li><a href="#" class="vip17"></a>Chicken Chow-Mein</li>
+                </ul> 
+                <p class="quality17">Tender beef fillet, flash-fried in a wok with onions, green</p><br>
+                <p class="quantity17">Crispy chicken tossed in a spicy sauce for a fiery and tasty</p>
+                <p class="qun17">Boneless chicken stir-fried with homemade noodles, fresh</p>
+                <div class="label17">
+                 <label for="number" class="rs49">Rs 1,950.00</label>
+                 <label for="number" class="rs50">Rs 1,770.00</label>
+                 <label for="number" class="rs51">Rs 1,670.00</label></div>
+                 <div class="i49">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i50">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i51">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd18">
+                <img src="single.webp" class="food52">
+                <img src="family.webp" class="food53">
+                <img src="dry.webp" class="food54">
+                <ul class="deal18">
+                    <li><a href="#" class="sp18"></a>Chicken Manchurian (Single)</li>
+                    <li><a href="#" class="del18"></a>Chicken Manchurian (Family)</li>
+                    <li><a href="#" class="vip18"></a>Chicken Chilli Dry (Single)</li>
+                </ul> 
+                <p class="quality18">Boneless chicken cooked in a tangy Manchurian sauce.</p><br>
+                <p class="quantity18">Boneless chicken cooked in a tangy Manchurian sauce.</p>
+                <p class="qun18">Irresistible. Served with egg fried rice.</p>
+                <div class="label18">
+                 <label for="number" class="rs52">Rs 1,630.00</label>
+                 <label for="number" class="rs53">Rs 2,290.00</label>
+                 <label for="number" class="rs54">Rs 1,730.00</label></div>
+                 <div class="i52">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i53">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i54">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd19">
+                <img src="chilli dry.webp" class="food55">
+                <img src="fish.webp" class="food56">
+                <img src="kung.webp" class="food57">
+                <ul class="deal19">
+                    <li><a href="#" class="sp19"></a>Chicken Chilli Dry (Family)</li>
+                    <li><a href="#" class="del19"></a>Garlic Fish (Seasonal)</li>
+                    <li><a href="#" class="vip19"></a>Kung Pao Chicken</li>
+                </ul> 
+                <p class="quality19">Irresistible.</p><br>
+                <p class="quantity19">Battered nuggets of white sea fish, fried to golden perfection</p>
+                <p class="qun19">Cubes of chicken stir-fried with peanuts and dried red</p>
+                <div class="label19">
+                 <label for="number" class="rs55">Rs 2,490.00</label>
+                 <label for="number" class="rs56">Rs 2,150.00</label>
+                 <label for="number" class="rs57">Rs 1,850.00</label></div>
+                 <div class="i55">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i56">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i57">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd20">
+                <img src="veg.webp" class="food58">
+                <img src="onion.webp" class="food59">
+                <img src="drum.webp" class="food60">
+                <ul class="deal20">
+                    <li><a href="#" class="sp20"></a>Stir-Fried Chicken with Vegetables in Black Pepper Sauce</li>
+                    <li><a href="#" class="del20"></a>Chicken with Pineapple, Mushrooms, Onion & Scallions</li>
+                    <li><a href="#" class="vip20"></a>Chicken Drumsticks (6 Pcs)</li>
+                </ul> 
+                <p class="quality20">Tender chicken stir-fried with fresh vegetables and coated in</p><br>
+                <p class="quantity20">A delightful combination of chicken, pineapple, mushrooms,</p>
+                <p class="qun20">Crispy chicken drumsticks served with sweet chilli and tangy</p>
+                <div class="label20">
+                 <label for="number" class="rs58">Rs 1,820.00</label>
+                 <label for="number" class="rs59">Rs 1,890.00</label>
+                 <label for="number" class="rs60">Rs 1,750.00</label></div>
+                 <div class="i58">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i59">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i60">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd21">
+                <img src="rice.webp" class="food61">
+                <ul class="deal21">
+                    <li><a href="#" class="sp21"></a>Egg Fried Rice(Family)</li></ul>
+                <p class="quality21">Fluffy rice stir-fried with eggs for a classic side dish.</p><br>
+                <div class="label21">
+                 <label for="number" class="rs61">Rs 1,050.00</label>
+                 <div class="i61">
+                 <i class="fas fa-plus"></i></div>
+            <div class="fd22">
+                <img src="tikka pizza.webp" class="food62">
+                <img src="pizza.webp" class="food63">
+                <img src="chicken pizza.webp" class="food64">
+                <ul class="deal22">
+                    <li><a href="#" class="sp22"></a>Chicken Tikka Pizza</li>
+                    <li><a href="#" class="del22"></a>Margherita Pizza</li>
+                    <li><a href="#" class="vip22"></a>Chicken Pizza</li>
+                </ul> 
+                <p class="quality22">A flavorful pizza topped with chicken tikka, onions, tomatoes,</p><br>
+                <p class="quantity22">Classic pizza topped with rich tomato sauce, melted</p>
+                <p class="qun22">Loaded with roasted chicken, olives, mushrooms, capsicums,</p>
+                <div class="label22">
+                 <label for="number" class="rs62">Rs 2,090.00</label>
+                 <label for="number" class="rs63">Rs 2,090.00</label>
+                 <label for="number" class="rs64">Rs 2,090.00</label></div>
+                 <div class="i62">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i63">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i64">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd23">
+                <img src="hawaiin.webp" class="food65">
+                <ul class="deal23">
+                    <li><a href="#" class="sp23"></a>Egg Fried Rice(Family)</li></ul>
+                <p class="quality23">Fluffy rice stir-fried with eggs for a classic side dish.</p><br>
+                <div class="label23">
+                 <label for="number" class="rs65">Rs 2,090.00</label>
+                 <div class="i65">
+                 <i class="fas fa-plus"></i></div>
+            <div class="fd24">
+                <img src="seekh.webp" class="food66">
+                <img src="kab.webp" class="food67">
+                <img src="tawa.webp" class="food68">
+                <ul class="deal24">
+                    <li><a href="#" class="sp24"></a>Beef Seekh Kabab(4 pcs)</li>
+                    <li><a href="#" class="del24"></a>Chicken Seekh Kabab(4 pcs)</li>
+                    <li><a href="#" class="vip24"></a>Makhni Tawa Chicken</li>
+                </ul> 
+                <p class="quality24">The mother of all seekh kababs.</p><br>
+                <p class="quantity24">Introduced by Salt’n Pepper in Lahore over three decades</p>
+                <p class="qun24">Two pieces of chargrilled chicken tikka cooked in butter on a</p>
+                <div class="label24">
+                 <label for="number" class="rs66">Rs 1,600.00</label>
+                 <label for="number" class="rs67">Rs 1,420.00</label>
+                 <label for="number" class="rs68">Rs 1,970.00</label></div>
+                 <div class="i66">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i67">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i68">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd25">
+                <img src="per.webp" class="food69">
+                <img src="boti.webp" class="food70">
+                <img src="bone.webp" class="food71">
+                <ul class="deal25">
+                    <li><a href="#" class="sp25"></a>Chicken Tikka(Per Piece)</li>
+                    <li><a href="#" class="del25"></a> Boneless Chicken Boti</li>
+                    <li><a href="#" class="vip25"></a>Boneless Chicken Cheese Boti</li>
+                </ul> 
+                <p class="quality25">The most famous desi BBQ item worldwide.</p><br>
+                <p class="quantity25">Feeling lazy to pick bones? Try our boneless Chicken Boti.</p>
+                <p class="qun25">Tender boneless chicken boti topped with cheese for a</p>
+                <div class="label25">
+                 <label for="number" class="rs69">Rs 790.00</label>
+                 <label for="number" class="rs70">Rs 1,750.00</label>
+                 <label for="number" class="rs71">Rs 1,950.00</label></div>
+                 <div class="i69">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i70">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i71">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd26">
+                <img src="malai.webp" class="food72">
+                <ul class="deal26">
+                    <li><a href="#" class="sp26"></a>Boneless Chicken Malai Boti</li></ul>
+                <p class="quality26">A richer, milder version of chicken boti, known for its creamy.</p><br>
+                <div class="label26">
+                 <label for="number" class="rs72">Rs 1,925.00</label>
+                 <div class="i72">
+                 <i class="fas fa-plus"></i></div>
+            <div class="fd27">
+                <img src="karahi.webp" class="food73">
+                <img src="qeema.webp" class="food74">
+                <img src="ginger.webp" class="food75">
+                <ul class="deal27">
+                    <li><a href="#" class="sp27"></a>Chicken Karahi(Large)</li>
+                    <li><a href="#" class="del27"></a>Chicken Tawa Qeema</li>
+                    <li><a href="#" class="vip27"></a>Chicken Ginger</li>
+                </ul> 
+                <p class="quality27">A classic Karahi made with tender chicken, a close cousin of</p><br>
+                <p class="quantity27">Hand-chopped chicken mince cooked on a flat griddle for a</p>
+                <p class="qun27">This dish introduced boneless chicken to the Pakistan palate</p>
+                <div class="label27">
+                 <label for="number" class="rs73">Rs 2,590.00</label>
+                 <label for="number" class="rs74">Rs 1,850.00</label>
+                 <label for="number" class="rs75">Rs 1,750.00</label></div>
+                 <div class="i73">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i74">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i75">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd28">
+                <img src="jal.webp" class="food76">
+                <img src="mince.webp" class="food77">
+                <ul class="deal28">
+                    <li><a href="#" class="sp28"></a>Grilled Chicken Breasts Steak</li>
+                    <li><a href="#" class="del28"></a>Pan Fried Black Pepper Chicken Steak</li>
+                </ul> 
+                <p class="quality28">Twin marinated grilled chicken breasts served with your</p><br>
+                <p class="quantity28">Chicken breasts encrusted with cracked black pepper, pan-</p>
+                <div class="label28">
+                 <label for="number" class="rs76">Rs 1,850.00</label>
+                 <label for="number" class="rs77">Rs 2,250.00</label>
+                  <div class="i76">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i77">
+                 <i class="fas fa-plus"></i></div>
+            <div class="fd29">
+                <img src="salad.webp" class="food78">
+                <img src="bar.webp" class="food79">
+                <img src="col.webp" class="food80">
+                <ul class="deal29">
+                    <li><a href="#" class="sp29"></a>Chicken Apple & Pineapple Salad</li>
+                    <li><a href="#" class="del29"></a>Salad Bar (Per Serving)</li>
+                    <li><a href="#" class="vip29"></a>Coleslaw</li>
+                </ul> 
+                <div class="label29">
+                 <label for="number" class="rs78">Rs 1,490.00</label>
+                 <label for="number" class="rs79">Rs 950.00</label>
+                 <label for="number" class="rs80">Rs 490.00</label></div>
+                 <div class="i78">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i79">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i80">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd30">
+                <img src="fries.webp" class="food81">
+                <img src="biryani.png" class="food82">
+                <img src="egg rice.webp" class="food83">
+                <ul class="deal30">
+                    <li><a href="#" class="sp30"></a>French Fries</li>
+                    <li><a href="#" class="del30"></a>Vegetable Biryani</li>
+                    <li><a href="#" class="vip30"></a>Egg Fried Rice(Family)</li>
+                </ul> 
+                <div class="label30">
+                 <label for="number" class="rs81">Rs 850.00</label>
+                 <label for="number" class="rs82">Rs 990.00</label>
+                 <label for="number" class="rs83">Rs 1,050.00</label></div>
+                 <div class="i81">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i82">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i83">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd31">
+                <img src="nan.webp" class="food84">
+                <img src="plan.webp" class="food85">
+                <img src="rog.webp" class="food86">
+                <ul class="deal31">
+                    <li><a href="#" class="sp31"></a>Stuffed Cheese & Green Chilli Naan</li>
+                    <li><a href="#" class="del31"></a>Plain Naan</li>
+                    <li><a href="#" class="vip31"></a>Roghni Naan</li>
+                </ul> 
+                <div class="label31">
+                 <label for="number" class="rs84">Rs 950.00</label>
+                 <label for="number" class="rs85">Rs 140.00</label>
+                 <label for="number" class="rs86">Rs 220.00</label></div>
+                 <div class="i84">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i85">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i86">
+                  <i class="fas fa-plus"></i></div>
+            <div class="fd32">
+                <img src="tandori.webp" class="food87">
+                <img src="roti.webp" class="food88">
+                <ul class="deal32">
+                    <li><a href="#" class="sp32"></a>Stuffed Cheese & Green Chilli Naan</li>
+                    <li><a href="#" class="del32"></a>Plain Naan</li>
+                </ul> 
+                <div class="label32">
+                 <label for="number" class="rs87">Rs 950.00</label>
+                 <label for="number" class="rs88">Rs 140.00</label>
+                 <div class="i87">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i88">
+                 <i class="fas fa-plus"></i></div>
+              <div class="fd33">
+                <img src="pepsi.webp" class="food89">
+                <img src="diet.webp" class="food90">
+                <img src="7up.webp" class="food91">
+                <ul class="deal33">
+                    <li><a href="#" class="sp33"></a>Pepsi(1.5 Liters)</li>
+                    <li><a href="#" class="del33"></a>Diet Pepsi (Can 250ml)</li>
+                    <li><a href="#" class="vip33"></a>7up (NR Bottle 345ml)</li>
+                </ul> 
+                <div class="label33">
+                 <label for="number" class="rs89">Rs 430.00</label>
+                 <label for="number" class="rs90">Rs 220.00</label>
+                 <label for="number" class="rs91">Rs 430.00</label></div>
+                 <div class="i89">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i90">
+                 <i class="fas fa-plus"></i></div>
+                 <div class="i91">
+                  <i class="fas fa-plus"></i></div>
+              <div class="cart-container">
+    <div class="cart-header">
+      <div class="btn"><i class="fa-solid fa-xmark"></i></div>
+      <h2>Your Cart</h2>
+    </div>
+    <div class="cart-body">
+      <p>Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <p class="min-order">Min order amount must be greater than PKR 1000</p>
+      <button class="checkout-btn" disabled>Checkout</button>
+    </div> 
+   </div>
+</body>
+</html
